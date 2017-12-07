@@ -1,0 +1,14 @@
+# Shared for all services
+
+# access actuator endpoints without requiring authentication
+management:
+  security:
+    enabled: false
+    
+eureka:
+  instance:
+    prefer-ip-address:  true
+  client:
+    serviceUrl:
+      defaultZone: http://eureka-service:8761/eureka
+  
