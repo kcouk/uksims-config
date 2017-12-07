@@ -1,5 +1,10 @@
 # Shared for all services
 
+# access actuator endpoints without requiring authentication
+management:
+  security:
+    enabled: false
+    
 eureka:
   instance:
     prefer-ip-address:  true
