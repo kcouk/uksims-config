@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<configuration debug="false">
+
+    <include resource="org/springframework/boot/logging/logback/base.xml"/>
+
+	<appender name="SIZE_AND_TIME_BASED_FILE"
+		class="ch.qos.logback.core.rolling.RollingFileAppender">
+		<!-- <file>/var/log/mail-service.log</file> -->
+		<file>/var/log/${LOG_FILE}</file>
+		<rollingPolicy class="ch.qos.logback.core.rolling.TimeBasedRollingPolicy">
+			<fileNamePattern>./docker-data/logs/notification-service/${LOG_FILE}.%d{yyyy-MM-dd}.%i.log
+			</fileNamePattern>
+			<timeBasedFileNamingAndTriggeringPolicy
+				class="ch.qos.logback.core.rolling.SizeAndTimeBasedFNATP">
+				<maxFileSize>10MB</maxFileSize>
+			</timeBasedFileNamingAndTriggeringPolicy>
+		</rollingPolicy>
+
+		<encoder>
+			<!-- <pattern>%relative [%thread] %-5level %logger{35} - %msg%n</pattern> -->
+			<pattern>${FILE_LOG_PATTERN}</pattern>
+		</encoder>
+	</appender> 
+
+    <root level="INFO">
+        <appender-ref ref="CONSOLE"/>
+        <appender-ref ref="SIZE_AND_TIME_BASED_FILE"/> 
+    </root>
+    
+    <jmxConfigurator/>
+    
+<!-- 
+    <logger name="org.springframework" level="INFO"/>
+    <logger name="co.uk.kuwait" level="INFO"/> -->
+    
+</configuration>
