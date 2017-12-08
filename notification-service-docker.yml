@@ -19,7 +19,6 @@ spring:
         implicit-strategy:  org.hibernate.boot.model.naming.ImplicitNamingStrategyJpaCompliantImpl
         physical-strategy: org.hibernate.boot.model.naming.PhysicalNamingStrategyStandardImpl
 
-
 logging:
   config: https://raw.githubusercontent.com/kcouk/uksims-config/master/notification-service-docker-logback.xml
   file: notification-service/notification-service.log

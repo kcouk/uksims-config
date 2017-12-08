@@ -8,7 +8,7 @@
 		<!-- <file>/var/log/mail-service.log</file> -->
 		<file>/var/log/${LOG_FILE}</file>
 		<rollingPolicy class="ch.qos.logback.core.rolling.TimeBasedRollingPolicy">
-			<fileNamePattern>./docker-data/logs/notification-service/${LOG_FILE}.%d{yyyy-MM-dd}.%i.log
+			<fileNamePattern>./docker-data/logs/${LOG_FILE}.%d{yyyy-MM-dd}.%i.log
 			</fileNamePattern>
 			<timeBasedFileNamingAndTriggeringPolicy
 				class="ch.qos.logback.core.rolling.SizeAndTimeBasedFNATP">
