@@ -21,7 +21,7 @@ spring:
 
 
 logging:
-  config: https://github.com/kcouk/uksims-config/blob/master/notification-service-docker-logback.xml
+  config: https://raw.githubusercontent.com/kcouk/uksims-config/master/notification-service-docker-logback.xml
   file: notification-service/notification-service.log
   level:
     root: warn
