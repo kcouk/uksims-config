@@ -12,3 +12,9 @@ eureka:
     serviceUrl:
       defaultZone: http://eureka-service:8761/eureka
   
+
+# zipkin base url 
+spring:    
+  zipkin:
+    base-url: http://zipkin-service:9411/
+  
