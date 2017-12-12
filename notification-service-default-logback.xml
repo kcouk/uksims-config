@@ -5,10 +5,9 @@
 
 	<appender name="SIZE_AND_TIME_BASED_FILE"
 		class="ch.qos.logback.core.rolling.RollingFileAppender">
-		<!-- <file>/var/log/mail-service.log</file> -->
-		<file>/var/log/${LOG_FILE}</file>
+		<file>./docker-data/logs/localhost/${LOG_FILE}</file>
 		<rollingPolicy class="ch.qos.logback.core.rolling.TimeBasedRollingPolicy">
-			<fileNamePattern>./docker-data/logs/${LOG_FILE}.%d{yyyy-MM-dd}.%i.log
+			<fileNamePattern>./docker-data/logs/localhost/${LOG_FILE}.%d{yyyy-MM-dd}.%i.log
 			</fileNamePattern>
 			<timeBasedFileNamingAndTriggeringPolicy
 				class="ch.qos.logback.core.rolling.SizeAndTimeBasedFNATP">
