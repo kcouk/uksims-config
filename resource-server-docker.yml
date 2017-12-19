@@ -1,11 +1,18 @@
 server:
   port: ${port:9999}
 
+  security:
+  oauth2
+    resource:
+      filter-order: 3
+
+
+
 
 # Token storage        
 oauth2-db:        
   datasource:
-    url: jdbc:mysql://localhost:3306/oauth2
+    url: jdbc:mysql://db_oauth2:3306/oauth2
     username: root
     password: '{cipher}084bc27633e111321a8f2aa0e670ba040c0a07fd9b594bc03d93c67205831ef6'
     driver-class-name: com.mysql.jdbc.Driver
