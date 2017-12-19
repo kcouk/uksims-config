@@ -1,0 +1,35 @@
+server:
+  port: 8043
+
+spring:
+  jpa:
+    show-sql: true # Show or not log for each sql query
+    hibernate:
+      ddl-auto: update # Hibernate ddl auto (create, create-drop, update)     
+      naming:
+        implicit-strategy:  org.hibernate.boot.model.naming.ImplicitNamingStrategyJpaCompliantImpl
+        physical-strategy: org.hibernate.boot.model.naming.PhysicalNamingStrategyStandardImpl
+         
+# Token storage        
+oauth2-db:        
+  datasource:
+    url: jdbc:mysql://localhost:3306/oauth2
+    username: root
+    password: '{cipher}084bc27633e111321a8f2aa0e670ba040c0a07fd9b594bc03d93c67205831ef6'
+    driver-class-name: com.mysql.jdbc.Driver
+    dbcp: # Keep the connection alive if idle for a long time (needed in production)
+      test-while-idle: true
+      validation-query: SELECT 1
+
+# User authentication database
+auth-db:        
+  datasource:
+    url: jdbc:mysql://192.168.168.58:3307/kms
+    username: root
+    password: '{cipher}c0e640a37211ad21c3e207930a51cb9ad8d4ca8183035d62ed46ecdb16dea1dd08191060c6dede54d72883ec227d9a4d'   
+    driver-class-name: com.mysql.jdbc.Driver
+    dbcp: # Keep the connection alive if idle for a long time (needed in production)
+      test-while-idle: true
+      validation-query: SELECT 1
+      
+ 
