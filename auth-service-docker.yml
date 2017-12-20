@@ -24,7 +24,7 @@ oauth2-db:
 # User authentication database
 auth-db:        
   datasource:
-    url: jdbc:mysql://192.168.168.58:3307/kms
+    url: jdbc:mysql://db_user:3306/db_user
     username: root
     password: '{cipher}c0e640a37211ad21c3e207930a51cb9ad8d4ca8183035d62ed46ecdb16dea1dd08191060c6dede54d72883ec227d9a4d'   
     driver-class-name: com.mysql.jdbc.Driver
