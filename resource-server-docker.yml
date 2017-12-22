@@ -6,15 +6,3 @@ server:
       resource:
         filter-order: 3
 
-
-#Routing
- zuul:
-  routes:
-    #Any name to group properties
-    users: 
-      # path to reroute
-      path: /user-serv/** 
-      # Override default config to pass Authorization downstream
-      sensitiveHeaders: 
-      # route destination
-      url: http://user-service:8082 
