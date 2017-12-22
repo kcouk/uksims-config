@@ -8,3 +8,10 @@ server:
 
 
 
+#Routing
+ zuul:
+  routes:
+    users: #Any name to group properties
+      path: /user-serv/** # path to reroute
+      sensitiveHeaders: # Override default config to pass Authorization downstream
+      url: http://user-service:8082 # route destination
