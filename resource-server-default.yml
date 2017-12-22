@@ -9,7 +9,11 @@ security:
 #Routing
  zuul:
   routes:
-    users: #Any name to group properties
-      path: /user-serv/** # path to reroute
-      sensitiveHeaders: # Override default config to pass Authorization downstream
-      url: http://localhost:8082 # route destination
+    #Any name to group properties
+    users: 
+      # path to reroute
+      path: /user-serv/** 
+      # Override default config to pass Authorization downstream
+      sensitiveHeaders: 
+      # route destination
+      url: http://localhost:8082 
