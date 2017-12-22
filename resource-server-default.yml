@@ -6,10 +6,13 @@ security:
     resource:
       filter-order: 3
 
-#Routing
- zuul:
+
+
+
+# Routing
+zuul:
   routes:
-    #Any name to group properties
+  # Any name to group properties
     users: 
       # path to reroute
       path: /user-serv/** 
@@ -17,3 +20,4 @@ security:
       sensitiveHeaders: 
       # route destination
       url: http://localhost:8082 
+
